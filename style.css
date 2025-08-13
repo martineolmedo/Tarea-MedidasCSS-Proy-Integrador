@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes aparecer {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes deArriba {
+    from{
+        top: -20%;
+    }
+    to {
+        top: 2em;
+    }
+}
+
+@keyframes deAbajo {
+    from{
+        top: 100%;
+    }
+    to {
+        top: 45%;
+    }
+}
+
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Open Sans", Arial, Sans-serif;
+}
+
+header {
+    width: 100vw;
+    height: 110vh;
+    background: url(./assets/img/pexels-apgpotr-683039.jpg) #281a0c;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 0;
+}
+
+.contenedor-header {
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    top: 2em;
+    right: 2em;
+    background-color: #281a0cc4;
+    animation: deArriba 1s;
+}
+
+.navegacion ul {
+    display: flex;
+    list-style: none;
+}
+
+.navegacion ul li {
+    padding: 0 2em;
+}
+
+.navegacion ul a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.navegacion ul a:hover{
+    text-decoration: underline;
+}
+
+.hero {
+    background-color: #281a0cb6;
+    min-height: 35vh;
+    position: absolute;
+    top: 40%;
+    color: #fff;
+    padding: 3em 2em;
+    animation: deAbajo 1s; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 300;
+}
+
+.hero h1 span {
+    font-weight: 800;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 0.5em;
+}
+
+.hero a {
+    width: 16%;
+    text-decoration: none;
+    color: #281a0c;
+    font-size: 2rem;
+    padding: 0.5em;
+    background-color: #f5e1c8;
+    border-radius: 0.3em;
+    transition: all 0.3s ease-out;
+}
+
+.hero a:hover {
+    padding: 0.7em;
+}
+
+.hero .nombre {
+    font-style: normal;
+    font-weight: 800;
+}
+
+main {
+    min-height: 35vh;
+    padding: 3em 0;
+    width: 100vw;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu .promocion{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 2em;
+    text-align: center;
+}
+
+.menu .promocion img {
+    width: 90%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.menu .promocion h3 {
+    font-size: 2rem;
+    width: 90%;
+    padding: 1em 0;
+}
+
+.menu .promocion p  {
+    font-size: 1.3rem;
+}
+
+.menu .promocion h4 {
+    font-size: 2rem;
+}
+
+.viejo {
+    text-decoration: line-through;
+    color: #ff0000;
+}
+
+.nuevo {
+    color: #008000;
+}
+
+.promociones {
+    background-color: #f5e1c8;
+    color: #281a0c;
+    min-height: 35vh;
+    padding: 3em 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.promociones h3 {
+    margin-bottom: 0.5em;
+    margin-left: 5em;
+    font-size: 3rem;
+}
+
+.contenedor-promociones {
+    width: 80%;
+    align-self: center;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box-uno, .box-dos {
+    width: 50%;
+}
+
+.comida {
+    border-bottom: 3px dotted #281a0c;
+    width: 80%;
+    margin-bottom: 2em;
+    padding-bottom: 3em;
+}
+
+.comida h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+}
+
+.comida p {
+    font-weight: 300;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.comida .precio {
+    margin-top: 0.5em;
+    font-weight: 800;
+}
+
+.contacto {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contacto h4 {
+    margin-top: 1em;
+    font-size: 3rem;
+}
+
+.contacto div {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto div img {
+    width: 10rem;
+    margin-bottom: 2em;
+}
+
+.contacto div p {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.contacto div a {
+    text-decoration: none;
+    color: #000;
+}
+
+.contacto div a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    height: 15vh;
+    background-color: #281a0c;
+    color: #fff;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
