@@ -27,7 +27,7 @@
         top: 100%;
     }
     to {
-        top: 45%;
+        top: 40%;
     }
 }
 
@@ -43,6 +43,7 @@ body {
 }
 
 header {
+    
     width: 100vw;
     height: 110vh;
     background: url(./assets/img/pexels-apgpotr-683039.jpg) #281a0c;
@@ -52,6 +53,7 @@ header {
 }
 
 .contenedor-header {
+    font-size: 1.2rem;
     width: 75%;
     height: 100%;
     margin: 0 auto;
@@ -90,15 +92,11 @@ header {
 
 .hero {
     background-color: #281a0cb6;
-    min-height: 35vh;
     position: absolute;
     top: 40%;
     color: #fff;
     padding: 3em 2em;
     animation: deAbajo 1s; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .hero h1 {
@@ -128,9 +126,6 @@ header {
     transition: all 0.3s ease-out;
 }
 
-.hero a:hover {
-    padding: 0.7em;
-}
 
 .hero .nombre {
     font-style: normal;
@@ -191,7 +186,6 @@ main {
     background-color: #f5e1c8;
     color: #281a0c;
     min-height: 35vh;
-    padding: 3em 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -199,8 +193,8 @@ main {
 }
 
 .promociones h3 {
-    margin-bottom: 0.5em;
-    margin-left: 5em;
+    text-align: center;
+    margin: 1em 0;
     font-size: 3rem;
 }
 
@@ -214,7 +208,7 @@ main {
 }
 
 .box-uno, .box-dos {
-    width: 50%;
+    max-width: 50%;
 }
 
 .comida {
@@ -288,4 +282,18 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+@media (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu .promocion {
+    width: 80%;
+  }
 }
